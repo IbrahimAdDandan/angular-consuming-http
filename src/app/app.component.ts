@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
 
     this.service.create(post)
       .subscribe(
-        newPost => {
+        (newPost: Post) => {
           post.id = newPost.id;
             this.posts.splice(0, 0, post);
           },
